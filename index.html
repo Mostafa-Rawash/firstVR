@@ -1,49 +1,121 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World! with AFrame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World! with AFrame</title>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <body>
+    <video autoplay></video>
 
+    <a-scene>
+      <a-assets>
+             <img
+          id="sky"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2Fearth_stars.png?v=1623203706481"
+        />
 
-</head>
-
-<body>
-  <a-scene background="color: #FAFAFA">
-    <a-assets>
-      <img id="sky" src="./earth_stars.png">
-      <img id="mercury" src="./8k_mercury.jpg">
-      <img id="venus" src="./8k_venus_surface.jpg">
-      <img id="earth" src="./8k_earth_daymap.jpg">
-      <img id="mars" src="./8k_mars.jpg">
-      <img id="jupiter" src="./8k_jupiter.jpg">
-      <img id="saturn" src="./8k_saturn.jpg">
-      <img id="saturn_ring" src="./8k_saturn_ring_alpha.png">
-      <img id="uranus" src="./2k_uranus.jpg">
-      <img id="Neptune" src="./2k_neptune.jpg">
-      <img id="sun" src="./800px-Map_of_the_full_sun.jpg">
-
-    </a-assets>
-
-    <a-light type="spot" color=" #FFF" intensity="1" angle="360">
-      </a-light>
+        <img
+          id="mercury"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F8k_mercury.jpg?v=1623203837635"
+        />
+        <img
+          id="venus"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F4k_venus_atmosphere.jpg?v=1623203718420"
+        />
+        <img
+          id="earth"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2Fearth.jpg?v=1623203712315"
+        />
+        <img
+          id="mars"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F8k_mars.jpg?v=1623203802883"
+        />
+        <img
+          id="jupiter"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F8k_jupiter.jpg?v=1623203747050"
+        />
+        <img
+          id="saturn"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F8k_saturn.jpg?v=1623204023671"
+        />
+        <img
+          id="saturn_ring"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F8k_saturn_ring_alpha.png?v=1623203706482"
+        />
+        <img
+          id="uranus"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F2k_uranus.jpg?v=1623203712652"
+        />
+        <img
+          id="Neptune"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F2k_neptune.jpg?v=1623203686165"
+        />
+        <img
+          id="sun"
+          src="https://cdn.glitch.com/7ae354a6-1518-42a3-b3ea-24da13dc4b7b%2F800px-Map_of_the_full_sun.jpg?v=1623203706482"
+        />
+      </a-assets>
       <a-camera position="0 0 0" rotation="0 90 0"></a-camera>
-      <a-sky src="#sky"></a-sky>
-      <!-- <a-sphere my_rotation2 src="#sun" radius="100" position="0 0 0" -->
-        <!-- animation="property: rotation; to: 0 360 0; loop: true; dur:50000"></a-sphere> -->
-      <a-sphere my_rotation src="#mercury" radius="1.5" position="126 0 0"></a-sphere>
-      <a-sphere my_rotation src="#venus" radius="3.7" position="130 0 0"></a-sphere>
-      <a-sphere my_rotation src="#earth" radius="3.9" position="140 0 0"></a-sphere>
-      <a-sphere my_rotation src="#mars" radius="2.1" position="150 0 0"></a-sphere>
-      <a-sphere my_rotation src="#jupiter" radius="43.4" position="210 0 0"></a-sphere>
-      <a-sphere my_rotation src="#saturn" radius="36.1.4" position="300 0 0"></a-sphere>
-      <a-ring my_rotation src="#saturn_ring" radius-inner="40.1" radius-outer="50.1" rotation="0 0 0"
-        position="300 0 0"></a-ring>
-      <a-sphere my_rotation src="#Neptune" radius="15.2" position="430 0 0"> </a-sphere>
-      <a-sphere my_rotation src="#uranus" radius="15.7" position="380 0 0"></a-sphere>
 
-  </a-scene>
-</body>
-<script src="/main.js" defer></script>
+      <!--     <a-light type="spot" color=" #FFF" intensity="1" angle="359"></a-light> -->
+<!--       <a-sky ></a-sky> -->
+      <!--       <a-sphere my_rotation2 id="sun_object" src="#sun" radius="100" position="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur:50000"></a-sphere> -->
+      <a-sphere
+        my_rotation
+        src="#mercury"
+        radius="1.5"
+        position="26 0 0"
+      ></a-sphere>
+      <a-sphere
+        my_rotation
+        src="#venus"
+        radius="3.7"
+        position="30 0 0"
+      ></a-sphere>
+      <a-sphere
+        my_rotation
+        src="#earth"
+        radius="3.9"
+        position="40 0 0"
+      ></a-sphere>
+      <a-sphere
+        my_rotation
+        src="#mars"
+        radius="2.1"
+        position="50 0 0"
+      ></a-sphere>
+      <a-sphere
+        my_rotation
+        src="#jupiter"
+        radius="43.4"
+        position="110 0 0"
+      ></a-sphere>
+      <a-entity position="200 0 0" my_rotation>
+        <a-sphere
+          src="#saturn"
+          radius="36.1.4"
+          position="0 0 0"
+        ></a-sphere>
+        <a-ring
+          src="#saturn_ring"
+          radius-inner="40.1"
+          radius-outer="50.1"
+          rotation="45 45 0"
+          position="0 0 0"
+                animation="property: rotation; to: 0 360 0; loop: true; dur:50000"
+        ></a-ring>
+      </a-entity>
 
+      <a-sphere my_rotation src="#Neptune" radius="15.2" position="330 0 0">
+      </a-sphere>
+      <a-sphere
+        my_rotation
+        src="#uranus"
+        radius="15.7"
+        position="280 0 0"
+      ></a-sphere>
+    </a-scene>
+  </body>
+  <script src="/main.js"></script>
 </html>

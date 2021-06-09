@@ -9,7 +9,7 @@ function position_z(val_x, radius) {
 AFRAME.registerComponent("my_rotation", {
   init: function () {
     let radius = this.el.object3D.position.x;
-    flag = 0;
+    let flag = 0;
     setInterval(() => {
       this.el.object3D.rotation.x += 0.0005;
 
@@ -37,3 +37,15 @@ AFRAME.registerComponent("my_rotation", {
     }, 0);
   },
 });
+
+
+const constraints = {
+  video: {
+    facingMode: "environment",
+  }
+};
+
+const video = document.querySelector('video');
+
+navigator.mediaDevices.getUserMedia(constraints).
+  then((stream) => {video.srcObject = stream});
