@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Hello World! with AFrame</title>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -12,8 +12,6 @@
   <a-scene background="color: #FAFAFA">
     <a-assets>
       <img id="sky" src="./earth_stars.png">
-
-
       <img id="mercury" src="./8k_mercury.jpg">
       <img id="venus" src="./8k_venus_surface.jpg">
       <img id="earth" src="./8k_earth_daymap.jpg">
@@ -22,36 +20,30 @@
       <img id="saturn" src="./8k_saturn.jpg">
       <img id="saturn_ring" src="./8k_saturn_ring_alpha.png">
       <img id="uranus" src="./2k_uranus.jpg">
-      <img id="Neptune " src="./2k_neptune.jpg">
+      <img id="Neptune" src="./2k_neptune.jpg">
       <img id="sun" src="./800px-Map_of_the_full_sun.jpg">
-
 
     </a-assets>
 
-    <a-camera position="300 0 300" rotation="0 90 0"></a-camera>
-    <a-sky set-sky src="#sky"></a-sky>
-
-
-    <a-sphere src='#sun' radius="100" position="0 0 0"></a-sphere>
-    <a-sphere src='#mercury' radius="1.5" position="125 0 0"></a-sphere>
-    <a-sphere src='#venus' radius="3.7" position="130 0 0"></a-sphere>
-    <a-sphere src='#earth' radius="3.9" position="140 0 0"></a-sphere>
-    <a-sphere src='#mars' radius="2.1" position="150 0 0"></a-sphere>
-    <a-sphere src='#jupiter' radius="43.4" position="210 0 0"></a-sphere>
-    <a-sphere src='#saturn' radius="36.1.4" position="300 0 0"></a-sphere>
-    <a-ring src='#saturn_ring' radius-inner="40.1" radius-outer="50.1" rotation="45 45 0" position="300 0 0"></a-ring>
-
-    <a-sphere src='#uranus' radius="15.7" position="380 0 0" animation="property :position; dur:4000;to:-380 0 360;direction:alternate-reverse ;loop:true; "></a-sphere>
-
-    <a-sphere src='#Neptune' radius="15.2" position="430 0 0"></a-sphere>
-
+    <a-light type="spot" color=" #FFF" intensity="1" angle="360">
+      </a-light>
+      <a-camera position="0 0 0" rotation="0 90 0"></a-camera>
+      <a-sky src="#sky"></a-sky>
+      <!-- <a-sphere my_rotation2 src="#sun" radius="100" position="0 0 0" -->
+        <!-- animation="property: rotation; to: 0 360 0; loop: true; dur:50000"></a-sphere> -->
+      <a-sphere my_rotation src="#mercury" radius="1.5" position="126 0 0"></a-sphere>
+      <a-sphere my_rotation src="#venus" radius="3.7" position="130 0 0"></a-sphere>
+      <a-sphere my_rotation src="#earth" radius="3.9" position="140 0 0"></a-sphere>
+      <a-sphere my_rotation src="#mars" radius="2.1" position="150 0 0"></a-sphere>
+      <a-sphere my_rotation src="#jupiter" radius="43.4" position="210 0 0"></a-sphere>
+      <a-sphere my_rotation src="#saturn" radius="36.1.4" position="300 0 0"></a-sphere>
+      <a-ring my_rotation src="#saturn_ring" radius-inner="40.1" radius-outer="50.1" rotation="0 0 0"
+        position="300 0 0"></a-ring>
+      <a-sphere my_rotation src="#Neptune" radius="15.2" position="430 0 0"> </a-sphere>
+      <a-sphere my_rotation src="#uranus" radius="15.7" position="380 0 0"></a-sphere>
 
   </a-scene>
-  <!-- <div id="canvas">
-
-  </div> -->
 </body>
-<script src="http://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<script src="main.js" type="module"></script>
+<script src="/main.js" defer></script>
 
 </html>
